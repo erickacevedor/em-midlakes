@@ -1,0 +1,10 @@
+{
+  "name": "mid-lakes-hvac",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node server.js",
+    "build": "echo 'static site - no build step'",
+    "start": "node server.js"
+  }
+}
