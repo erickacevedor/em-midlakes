@@ -1,0 +1,18 @@
+# Local dev docroot hygiene.
+#
+# This folder is now the project root as well as the Laragon docroot, so the
+# source tree, build tooling and data files sit next to the served site.
+# Keep them off HTTP. Apache only -- if Laragon is running nginx, these rules
+# are ignored and you'd need the equivalent location blocks instead.
+
+# Source, tooling and data directories.
+RedirectMatch 404 ^/(public|data|components|lib|node_modules|\.git)(/|$)
+
+# Non-web files that would otherwise be readable at the root.
+<FilesMatch "\.(sh|docx|ts|tsx|lock|yaml)$">
+  Require all denied
+</FilesMatch>
+
+<FilesMatch "^(package\.json|pnpm-lock\.yaml|server\.js|\.gitignore|\.htaccess)$">
+  Require all denied
+</FilesMatch>
