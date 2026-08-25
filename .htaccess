@@ -1,12 +1,33 @@
 # Local dev docroot hygiene.
 #
-# This folder is now the project root as well as the Laragon docroot, so the
-# source tree, build tooling and data files sit next to the served site.
-# Keep them off HTTP. Apache only -- if Laragon is running nginx, these rules
-# are ignored and you'd need the equivalent location blocks instead.
+# This folder is the project root as well as the Laragon docroot, so the source
+# tree, build tooling and data files sit next to the served site. The site
+# itself lives in public/ (the same tree server.js and build.sh use), so Apache
+# serves from there and everything else stays off HTTP.
+# Apache only -- if Laragon is running nginx, these rules are ignored and you'd
+# need the equivalent location blocks instead.
+
+DirectoryIndex index.html index.php
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Serve the site out of public/ without showing it in the URL.
+  # Deliberately docroot-agnostic: the substitution is relative to this file's
+  # directory, so it works whether the project IS the docroot (midlakes.test)
+  # or sits inside it (localhost/midlakes/). The guard stops the rewritten
+  # request from re-entering and looping.
+  RewriteCond %{REQUEST_URI} !(^|/)public/
+  RewriteRule ^(.*)$ public/$1 [L]
+
+  # Block direct /public/... URLs. THE_REQUEST is the original request line, so
+  # this matches only what the browser asked for, never the rewrite above.
+  RewriteCond %{THE_REQUEST} \s/+(\S*/)?public/ [NC]
+  RewriteRule ^ - [R=404,L]
+</IfModule>
 
 # Source, tooling and data directories.
-RedirectMatch 404 ^/(public|data|components|lib|node_modules|\.git)(/|$)
+RedirectMatch 404 ^/(data|components|lib|node_modules|\.git)(/|$)
 
 # Non-web files that would otherwise be readable at the root.
 <FilesMatch "\.(sh|docx|ts|tsx|lock|yaml)$">

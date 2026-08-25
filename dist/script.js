@@ -50,7 +50,7 @@ if (form) {
 
 // Reveal-on-scroll animation
 const revealTargets = document.querySelectorAll(
-  ".about-copy, .stats, .gallery, .promise, .section-title, .service-card, .comfort-card, .why-card, .faq-list-wrap, .faq-media, .contact-copy, .quote-form",
+  ".about-copy, .stats, .gallery, .promise, .section-title, .service-card, .comfort-card, .why-card, .faq-list-wrap, .faq-media, .contact-copy, .quote-form, .detail-copy, .detail-aside, .step, .post-card, .chip-row, .map-split, .group-grid",
 )
 revealTargets.forEach((el) => el.classList.add("reveal"))
 
