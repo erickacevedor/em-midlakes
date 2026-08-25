@@ -123,6 +123,18 @@ const CLIENT = `
 </script>
 `
 
+const NOT_FOUND = `<!doctype html><html lang="en"><head><meta charset="utf-8">
+<title>Page not found | Mid Lakes HVAC</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="/styles.css"></head><body>
+<section class="hero-compact"><div class="container">
+<span class="eyebrow"><span class="dot"></span>404</span>
+<h1>We couldn't find that page.</h1>
+<p class="hero-compact-sub">The link may be out of date, or the page may have moved.</p>
+<div class="hero-actions"><a href="/" class="btn btn-primary">Back to home</a>
+<a href="tel:+16787760591" class="btn btn-ghost" style="color:var(--ink);border-color:var(--gray-line)">Call (678) 776-0591</a></div>
+</div></section></body></html>`
+
 function injectClient(html) {
   const marker = "</body>"
   const i = html.lastIndexOf(marker)
@@ -184,15 +196,11 @@ const server = http.createServer((req, res) => {
           return
         }
       }
-      // SPA-ish fallback to index for unknown routes
-      fs.readFile(path.join(ROOT, "index.php"), (err2, indexData) => {
-        if (err2) {
-          res.writeHead(404, { "Content-Type": "text/plain" })
-          res.end("Not Found")
-        } else {
-          sendHtml(res, indexData, dev)
-        }
-      })
+      // A real 404. This is a static marketing site, not an SPA: serving the
+      // home page with a 200 for every unknown URL creates soft-404s. Apache
+      // already answers 404 here, so this keeps dev honest with production.
+      res.writeHead(404, { "Content-Type": MIME[".html"], ...SECURITY_HEADERS })
+      res.end(NOT_FOUND)
       return
     }
     const ext = path.extname(filePath).toLowerCase()

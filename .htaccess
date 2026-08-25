@@ -7,7 +7,10 @@
 # Apache only -- if Laragon is running nginx, these rules are ignored and you'd
 # need the equivalent location blocks instead.
 
-DirectoryIndex index.html index.php
+# Sin index.* en la raiz, un fallo del rewrite listaria el repo entero.
+Options -Indexes
+
+DirectoryIndex index.php index.html
 
 <IfModule mod_rewrite.c>
   RewriteEngine On
@@ -26,11 +29,11 @@ DirectoryIndex index.html index.php
   RewriteRule ^ - [R=404,L]
 </IfModule>
 
-# Source, tooling and data directories.
-RedirectMatch 404 ^/(data|components|lib|node_modules|\.git)(/|$)
+# Directorios que no son web.
+RedirectMatch 404 ^/(docs|node_modules|\.git)(/|$)
 
 # Non-web files that would otherwise be readable at the root.
-<FilesMatch "\.(sh|docx|ts|tsx|lock|yaml)$">
+<FilesMatch "\.(sh|docx|lock|yaml)$">
   Require all denied
 </FilesMatch>
 

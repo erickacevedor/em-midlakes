@@ -15,3 +15,6 @@ node_modules
 .DS_Store
 # Artefacto de build (se regenera con ./build.sh)
 mid-lakes-site.zip
+
+# Salida de build: se regenera con ./build.sh
+dist/
