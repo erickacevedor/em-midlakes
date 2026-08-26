@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css?v=2.1" />
+  <link rel="stylesheet" href="../styles.css?v=2.2" />
 </head>
 <body>
   <!-- ===== Header ===== -->
@@ -21,8 +21,9 @@
       </a>
       <nav class="main-nav" id="main-nav" aria-label="Primary">
         <a href="../">Home</a>
+        <a href="../about-us/">About</a>
         <a href="../services/">Services</a>
-        <a href="../maintenance-plans/">Maintenance</a>
+        <a href="../service-agreements/">Service Agreements</a>
         <a href="../service-area/" aria-current="page">Service Areas</a>
         <a href="../financing/">Financing</a>
         <a href="../blog/">Blog</a>
@@ -244,8 +245,9 @@
       </div>
       <nav class="footer-nav" aria-label="Footer">
         <a href="../">Home</a>
+        <a href="../about-us/">About Us</a>
         <a href="../services/">Services</a>
-        <a href="../maintenance-plans/">Maintenance Plans</a>
+        <a href="../service-agreements/">Service Agreements</a>
         <a href="../service-area/">Service Areas</a>
         <a href="../financing/">Financing</a>
         <a href="../blog/">Blog</a>

@@ -619,6 +619,11 @@ em,
   gap: 20px;
 }
 
+/* /about-us/ lists three values, not four - a 2-up grid would leave a hole. */
+.why-grid--three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .why-card {
   background: var(--paper);
   border-radius: var(--radius);
@@ -1029,10 +1034,10 @@ em,
 }
 
 /* ===== Responsive ===== */
-/* The primary nav carries six page links plus the phone number, so it runs out
-   of room well before the page grid does. Tighten it first, then collapse it to
-   the toggle at 1080px - the page layout still switches at 960px below. */
-@media (max-width: 1200px) {
+/* The primary nav carries seven page links plus the phone number, so it runs
+   out of room well before the page grid does. Tighten it first, then collapse
+   it to the toggle at 1200px - the page layout still switches at 960px below. */
+@media (max-width: 1400px) {
   .main-nav {
     gap: 18px;
   }
@@ -1042,7 +1047,7 @@ em,
   }
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 1200px) {
   .header-cta {
     display: none;
   }
@@ -1099,7 +1104,8 @@ em,
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .why-grid {
+  .why-grid,
+  .why-grid--three {
     grid-template-columns: 1fr;
   }
 
@@ -1176,9 +1182,9 @@ em,
 
 /* =========================================================================
    Sub-page components
-   Added for /services/, /maintenance-plans/, /service-area/, /financing/
-   and /blog/. Everything below reuses the existing tokens and keeps the same
-   spacing rhythm as the home page sections.
+   Added for /about-us/, /services/, /service-agreements/, /service-area/,
+   /financing/ and /blog/. Everything below reuses the existing tokens and
+   keeps the same spacing rhythm as the home page sections.
    ========================================================================= */
 
 /* --- Shorter photo hero for interior pages --- */
@@ -1360,6 +1366,24 @@ em,
   color: var(--muted);
 }
 
+/* Inline links inside running text. The base rule is `color: inherit`, which
+   suits nav and card links but leaves prose links indistinguishable from the
+   sentence around them - WCAG 1.4.1. Scoped to body copy only. */
+.lead a,
+.chip-note a,
+.contact-sub a,
+.comfort-sub a,
+.faq-item p a,
+.detail-copy p a {
+  color: var(--red-text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.comfort-sub a {
+  color: var(--red-on-dark);
+}
+
 /* --- Map beside the community list --- */
 .map-split {
   display: grid;
@@ -1398,6 +1422,60 @@ em,
 
 .area-list li:last-child {
   border-bottom: none;
+}
+
+/* --- Rate table (service agreement pricing) --------------------------------
+   The only tabular data on the site. The wrapper scrolls horizontally instead
+   of letting three columns squeeze into a phone width, so the rates stay
+   readable rather than wrapping to one word per line. */
+.rate-table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--gray-line);
+  border-radius: var(--radius);
+  background: var(--white);
+}
+
+.rate-table {
+  width: 100%;
+  min-width: 620px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.rate-table thead th {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 20px 26px;
+  border-bottom: 1px solid var(--gray-line);
+  white-space: nowrap;
+}
+
+.rate-table tbody th,
+.rate-table tbody td {
+  padding: 22px 26px;
+  border-bottom: 1px solid var(--gray-line);
+  vertical-align: top;
+  font-size: 0.96rem;
+}
+
+.rate-table tbody tr:last-child th,
+.rate-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.rate-table tbody th {
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.rate-amount {
+  font-weight: 700;
+  color: var(--blue);
+  white-space: nowrap;
 }
 
 /* --- Numbered process track --- */
@@ -1565,6 +1643,57 @@ em,
   .steps,
   .post-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* Three columns cannot scroll usefully on a phone: the rate ends up off
+     screen with no hint it is there. Stack each row into its own card and
+     drop the header row, since the row label and the rate read on their own. */
+  .rate-table-wrap {
+    overflow-x: visible;
+    border: none;
+    border-radius: 0;
+    background: none;
+  }
+
+  .rate-table {
+    min-width: 0;
+  }
+
+  .rate-table thead {
+    display: none;
+  }
+
+  .rate-table tbody tr {
+    display: block;
+    background: var(--white);
+    border: 1px solid var(--gray-line);
+    border-radius: var(--radius);
+    padding: 22px 24px;
+  }
+
+  .rate-table tbody tr + tr {
+    margin-top: 14px;
+  }
+
+  .rate-table tbody th,
+  .rate-table tbody td {
+    display: block;
+    padding: 0;
+    border-bottom: none;
+    white-space: normal;
+  }
+
+  .rate-table tbody th {
+    font-size: 1.02rem;
+  }
+
+  .rate-amount {
+    margin: 6px 0 10px;
+    font-size: 1.1rem;
+  }
+
+  .rate-table tbody td:last-child {
+    color: var(--muted);
   }
 
   .hero-compact {

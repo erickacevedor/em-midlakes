@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles.css?v=2.1" />
+  <link rel="stylesheet" href="../styles.css?v=2.2" />
 </head>
 <body>
   <!-- ===== Header ===== -->
@@ -21,8 +21,9 @@
       </a>
       <nav class="main-nav" id="main-nav" aria-label="Primary">
         <a href="../">Home</a>
+        <a href="../about-us/">About</a>
         <a href="../services/" aria-current="page">Services</a>
-        <a href="../maintenance-plans/">Maintenance</a>
+        <a href="../service-agreements/">Service Agreements</a>
         <a href="../service-area/">Service Areas</a>
         <a href="../financing/">Financing</a>
         <a href="../blog/">Blog</a>
@@ -94,7 +95,7 @@
           <p>When your heating or cooling system isn&rsquo;t doing its job, you shouldn&rsquo;t have to guess what&rsquo;s wrong.</p>
           <p>Mid Lakes HVAC provides professional HVAC repair and preventive maintenance for central heating and cooling systems. Our technicians take the time to inspect your equipment, diagnose the problem, and explain what we find so you can make a confident decision about your home.</p>
           <p>Routine maintenance is just as important. Seasonal service can help your equipment run more efficiently, reduce unnecessary wear, and give us a chance to catch developing problems before they leave your family without heating or cooling.</p>
-          <p>For homeowners who want to make ongoing maintenance easier, Mid Lakes HVAC also offers the <a href="../maintenance-plans/">Mid Lakes Comfort Club</a>.</p>
+          <p>For homeowners who want to make ongoing maintenance easier, Mid Lakes HVAC also offers the <a href="../service-agreements/">Mid Lakes Comfort Club</a>.</p>
             <a href="#contact" class="btn btn-primary">Schedule HVAC Repair or Maintenance</a>
           </div>
           <div class="detail-aside">
@@ -286,7 +287,7 @@
         </ul>
         <p class="lead" style="margin-top:28px">Regular servicing can help maintain system performance, catch developing issues early, and protect the equipment your family depends on year-round.</p>
         <div class="hero-actions" style="margin-top:24px">
-          <a href="../maintenance-plans/" class="btn btn-primary">Join the Mid Lakes Comfort Club</a>
+          <a href="../service-agreements/" class="btn btn-primary">Join the Mid Lakes Comfort Club</a>
         </div>
       </div>
     </section>
@@ -381,8 +382,9 @@
       </div>
       <nav class="footer-nav" aria-label="Footer">
         <a href="../">Home</a>
+        <a href="../about-us/">About Us</a>
         <a href="../services/">Services</a>
-        <a href="../maintenance-plans/">Maintenance Plans</a>
+        <a href="../service-agreements/">Service Agreements</a>
         <a href="../service-area/">Service Areas</a>
         <a href="../financing/">Financing</a>
         <a href="../blog/">Blog</a>

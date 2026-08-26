@@ -15,6 +15,11 @@ DirectoryIndex index.php index.html
 <IfModule mod_rewrite.c>
   RewriteEngine On
 
+  # /maintenance-plans/ became /service-agreements/ when the page was renamed.
+  # Relative substitution, like the rule below, so the redirect works whether
+  # the project IS the docroot or sits inside it.
+  RewriteRule ^maintenance-plans(/.*)?$ service-agreements/ [R=301,L]
+
   # Serve the site out of public/ without showing it in the URL.
   # Deliberately docroot-agnostic: the substitution is relative to this file's
   # directory, so it works whether the project IS the docroot (midlakes.test)
