@@ -1671,7 +1671,7 @@ em,
     padding: 22px 24px;
   }
 
-  .rate-table tbody tr + tr {
+  .rate-table tbody tr+tr {
     margin-top: 14px;
   }
 
@@ -1825,4 +1825,9 @@ section#contact:before {
 
 .site-footer {
   padding-bottom: 300px;
+}
+
+.what-happens.about:before,
+.what-happens.about:after {
+  display: none;
 }

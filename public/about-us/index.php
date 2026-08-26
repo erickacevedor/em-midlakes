@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../styles.css?v=2.2" />
 </head>
+
 <body>
   <!-- ===== Header ===== -->
   <header class="site-header" id="top">
@@ -175,7 +177,7 @@
       </div>
     </section>
 
-    <section class="section about">
+    <section class="section about what-happens">
       <div class="container about-grid">
         <div class="about-copy">
           <span class="eyebrow"><span class="dot"></span>Community</span>
@@ -295,4 +297,5 @@
 
   <script src="../script.js" defer></script>
 </body>
+
 </html>
