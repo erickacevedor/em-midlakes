@@ -11,6 +11,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&display=swap" rel="stylesheet" />
+  <!-- Cache buster. Browsers and hosts hold these for a long time, so a
+       deploy can serve week-old assets while the HTML updates - new markup,
+       stale CSS. Bump the stamp on BOTH files below whenever styles.css or
+       script.js changes, on every page. -->
   <link rel="stylesheet" href="../styles.css?v=2.2" />
 </head>
 
@@ -302,7 +306,7 @@
     </div>
   </footer>
 
-  <script src="../script.js" defer></script>
+  <script src="../script.js?v=2.2" defer></script>
 </body>
 
 </html>
