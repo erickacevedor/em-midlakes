@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>HVAC Service Areas Near Loganville, GA | Mid Lakes HVAC</title>
-  <meta name="description" content="HVAC service across Loganville, Snellville, Monroe, Grayson, Lawrenceville &amp; surrounding Walton and Gwinnett Counties. 24/7 repair and Rheem installs. Call to confirm your area." />
+  <meta name="description" content="HVAC service across Loganville, Snellville, Monroe, Grayson, Lawrenceville &amp; surrounding Walton and Gwinnett Counties. 24/7 repair and Carrier installs. Call to confirm your area." />
   <meta name="theme-color" content="#0f1f35" />
   <link rel="icon" href="../images/MidLakesLogo_NoBkgd.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -65,7 +65,7 @@
           <span class="eyebrow"><span class="dot"></span>Local since 2018</span>
           <h2>Serving Our Neighbors with Pride Since 2018</h2>
           <p class="lead">At Mid Lakes HVAC, we aren&rsquo;t a big regional franchise&mdash;we&rsquo;re your local neighbors. With our headquarters located right here in Loganville, Georgia, our family-owned business provides fast, reliable, and honest HVAC solutions to homeowners across our local community.</p>
-          <p class="lead" style="margin-top:14px">Whether you need 24/7 emergency AC repair, a high-efficiency Rheem&reg; installation, or crawl space encapsulation, our Loganville technicians deliver 75+ years of combined experience right to your door.</p>
+          <p class="lead" style="margin-top:14px">Whether you need 24/7 emergency AC repair, a high-efficiency Carrier&reg; installation, or crawl space encapsulation, our Loganville technicians deliver 75+ years of combined experience right to your door.</p>
         </div>
         <figure class="faq-media">
           <img src="../images/technician.webp" alt="Mid Lakes HVAC technician servicing a heating and cooling system" />
@@ -116,7 +116,7 @@
                 <p>Live after-hours dispatch for sudden central AC and heating breakdowns&mdash;no automated runarounds.</p>
               </li>
               <li>
-                <h3>New Rheem&reg; System Installs</h3>
+                <h3>New Carrier&reg; System Installs</h3>
                 <p>High-efficiency heat pumps, air conditioners, and furnaces backed by free upfront estimates and our Parts &amp; Labor Guarantee.</p>
               </li>
               <li>
@@ -165,7 +165,7 @@
             </details>
             <details class="faq-item">
               <summary>Do you offer free estimates on replacement systems in all service areas?<span class="faq-mark"></span></summary>
-              <p>Yes! We provide 100% free estimates on new Rheem&reg; system installations across our entire coverage footprint.</p>
+              <p>Yes! We provide 100% free estimates on new Carrier&reg; system installations across our entire coverage footprint.</p>
             </details>
           </div>
         </div>

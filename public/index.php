@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Heating &amp; Air Conditioning in Loganville, GA | Mid Lakes HVAC</title>
     <meta name="description"
-      content="Family-owned Loganville HVAC since 2018. Rheem installs, repairs, insulation &amp; crawl space encapsulation. 24/7 emergency service, free estimates &amp; a parts-and-labor guarantee." />
+      content="Family-owned Loganville HVAC since 2018. Carrier installs, repairs, insulation &amp; crawl space encapsulation. 24/7 emergency service, free estimates &amp; a parts-and-labor guarantee." />
     <meta name="theme-color" content="#0f1f35" />
     <link rel="icon" href="images/MidLakesLogo_NoBkgd.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -58,7 +58,7 @@
           <div class="hero-copy">
             <h1>Heating, Cooling &amp; Home Comfort in Loganville, GA</h1>
             <p class="hero-sub">Family-owned, locally operated, and backed by over 75 years of combined experience. We
-              keep your home comfortable year-round with trusted Rheem installations and 24/7 emergency service.</p>
+              keep your home comfortable year-round with trusted Carrier installations and 24/7 emergency service.</p>
             <div class="hero-actions">
               <a href="tel:+16787760591" class="btn btn-primary">Call Now: (678) 776-0591</a>
               <a href="#contact" class="btn btn-ghost">Get a Free Estimate</a>
@@ -97,7 +97,7 @@
           </div>
           <ul class="promise">
             <li>
-              <h3>Rheem&reg; Authorized Quality</h3>
+              <h3>Carrier&reg; Dealer Quality</h3>
               <p>We install premium, high-efficiency heating and cooling systems built for long-term dependability.</p>
             </li>
             <li>
@@ -275,7 +275,7 @@
               </details>
               <details class="faq-item">
                 <summary>What brands do you install?<span class="faq-mark" aria-hidden="true"></span></summary>
-                <p>We are Rheem&reg; Authorized and install premium, high-efficiency heating and cooling systems built
+                <p>We are a Carrier&reg; dealer and install premium, high-efficiency heating and cooling systems built
                   for long-term dependability.</p>
               </details>
               <details class="faq-item">
